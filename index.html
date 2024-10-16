@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Полюс холода</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <!-- Логотип -->
+            <img src="зсву.png" alt="Логотип" class="logo">
+            
+            <!-- Вторая картинка справа от логотипа -->
+            <img src="единая россия.png" alt="Вторая картинка" class="second-image">
+        </div>
+    </header>
+
+    <!-- Кнопка для открытия других кнопок -->
+    <button onclick="toggleButtons()" class="register-button">| | |</button>
+    
+    <!-- Скрытые кнопки для регистрации и входа -->
+    <div id="hidden-buttons" style="display: none;">
+        <button class="hidden-button" onclick="location.href='registration.html'">Регистрация</button>
+        <button class="hidden-button" onclick="location.href='login.html'">Войти</button>
+        <button class="hidden-button" onclick="location.href='tourPackages.html'">Турпакеты</button>
+    </div>
+
+    <header>
+        <h1>Полюс Холода</h1>
+    </header>
+
+    <section>
+        <div class="image-container">
+            <img src="pizda.png" alt="Изображение 1" class="content-image">
+            <a href="bid.html" class="transparent-button"></a>
+            <img src="news.png" alt="Изображение 1" class="content-image">
+            <a href="https://vk.com/poleofcold2024?z=photo645751614_457243246%2Falbum645751614_00%2Frev" class="vk-button"></a>
+            <a href="https://rutube.ru/" class="rutube-button"></a>
+            <a href="https://vk.com/video645751614_456239312" class="vk-button2"></a>
+            <a href="https://youtu.be/qJRz6lomr20?si=iY2Ls5S_jZ7ECl9M" class="video-button"></a>
+            <img src="tarasasa.png" alt="Изображение 1" class="trassa-image">
+        </div>
+    </section>
+
+    <script>
+        function toggleButtons() {
+            const hiddenButtons = document.getElementById("hidden-buttons");
+            if (hiddenButtons.style.display === "none") {
+                hiddenButtons.style.display = "block"; // Показываем кнопки
+            } else {
+                hiddenButtons.style.display = "none"; // Скрываем кнопки
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

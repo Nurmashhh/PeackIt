@@ -1,0 +1,437 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    height: 80px;
+    background-color: #0000FF;
+    padding: 1px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Общие стили для форм */
+form {
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: auto; /* Центрируем форму */
+    padding: 20px; /* Отступы внутри формы */
+    border: 1px solid #ccc; /* Рамка формы */
+    border-radius: 5px; /* Закругление углов */
+    background-color: #f9f9f9; /* Цвет фона */
+}
+
+/* Стили для меток */
+label {
+    display: block; /* Каждая метка занимает свою строку */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для полей ввода */
+input {
+    width: 95%; /* Ширина 100% */
+    padding: 10px; /* Отступы внутри полей */
+    margin-bottom: 15px; /* Отступ снизу */
+    border: 1px solid #ccc; /* Рамка полей */
+    border-radius: 5px; /* Закругление углов */
+}
+
+/* Стиль для кнопки регистрации */
+button[type="submit"] {
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white; /* Белый текст */
+    border: none; /* Без рамки */
+    padding: 10px 20px; /* Отступы */
+    border-radius: 5px; /* Закругление углов */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+
+/* Эффект при наведении на кнопку регистрации */
+button[type="submit"]:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+}
+
+/* Стиль для кнопки "Назад" */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336; /* Красный цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Эффект при наведении на кнопку "Назад" */
+.back-button:hover {
+    background-color: #d32f2f; /* Более темный красный при наведении */
+}
+
+.logo-container {
+    display: flex; /* Flexbox для выравнивания логотипа и второй картинки */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    padding: 20px;
+    justify-content: flex-start; /* Выравнивание элементов слева */
+}
+
+
+/* Стиль для логотипа */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: auto;
+}
+
+.second-image {
+    height: 80px; /* Можно настроить размер для второй картинки */
+    width: auto;
+    margin-left: 70px; /* Отступ справа от логотипа */
+    margin-top: -0.7%;
+}
+
+button-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Стили для кнопки */
+.registerr-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 108px;
+}
+
+/* Стиль для кнопки регистрации */
+.register-button {
+    position: absolute; /* Позволяет позиционировать кнопку */
+    top: 20px; /* Отступ сверху */
+    right: 20px; /* Отступ справа */
+    padding: 10px 30px;
+    background-color: #2196F3; /* Синий цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку регистрации */
+.register-button:hover {
+    background-color: #1976D2; /* Более темный синий при наведении */
+}
+
+/* Стили для скрытых кнопок */
+#hidden-buttons {
+    position: absolute; /* Позволяет позиционировать контейнер с кнопками */
+    top: 70px; /* Отступ сверху (измените по вашему усмотрению) */
+    right: 20px; /* Отступ справа */
+}
+
+/* Стиль для скрытых кнопок */
+.hidden-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FFFFFF;/* Зеленый цвет */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на скрытые кнопки */
+.hidden-button:hover {
+    background-color: #0dfc19; /* Более темный зеленый при наведении */
+}
+
+/* Стили для дополнительного контента */
+.extra-content {
+    margin-top: 20px; /* Отступ сверху */
+    padding: 20px; /* Отступы внутри блока */
+    background-color: #f0f0f0; /* Цвет фона блока */
+    border: 1px solid #ccc; /* Рамка блока */
+    border-radius: 5px; /* Закругление углов */
+}
+
+/* Остальные стили, которые у вас уже есть... */
+.image-container {
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+    display: inline-block; /* Позволяет обернуть изображение и кнопку */
+}
+
+/* Стили для изображения */
+.content-image {
+    width: 102%; /* Ширина 100% блока */
+    height: auto; /* Высота пропорциональна */
+}
+
+.trassa-image {
+    width: 80%;
+    height: auto;
+    margin-left: 200px;
+}
+
+/* Стили для прозрачной кнопки */
+.transparent-button {
+    width: 220px;
+    height: 50px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 50%; /* Положение слева */
+    top: 27.4%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 90px; /* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Стили для меток и полей ввода */
+label, input, textarea {
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопки отправки формы */
+.submit-button {
+    display: inline-block; /* Чтобы кнопка реагировала на центрирование */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для кнопки возврата на главную страницу */
+.back-button {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 800px;
+    margin-left: 440px;
+}
+
+.back-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Стили для кнопки входа */
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vk-button {
+    width: 220px;
+    height: 600px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 32%; /* Положение слева */
+    top: 56%;
+    border-radius: 10%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон *//* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.rutube-button {
+    width: 450px;
+    height: 260px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 63.7%; /* Положение слева */
+    top: 62.4%;
+    border-radius: 15%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон *//* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.vk-button2 {
+    width: 105px;
+    height: 250px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 54.3%; /* Положение слева */
+    top: 50%;
+    border-radius:15%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон *//* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.video-button {
+    width: 105px;
+    height: 250px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 73.4%; /* Положение слева */
+    top: 50%;
+    border-radius:15%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон *//* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.tourPackagesDefault-button {
+    width: 640px;
+    height: 80px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 50%; /* Положение слева */
+    top: 50%;
+    border-radius: 7%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон *//* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.tourPackagesEconomy-button {
+    width: 640px;
+    height: 80px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 50%; /* Положение слева */
+    top: 20%;
+    border-radius: 7%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон *//* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.tourPackagesBusiness-button {
+    width: 640px;
+    height: 80px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 50%; /* Положение слева */
+    top: 80%;
+    border-radius: 7%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон *//* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+#application-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.radio-group label {
+    display: block;
+    margin: 5px 0;
+}
+
+#category-field {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+}
+
+.tourPackages-image {
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+
+
+
+
+
+

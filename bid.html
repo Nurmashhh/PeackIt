@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Другая страница</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <a href="index.html" class="back-button">Вернуться на главную страницу</a>
+</head>
+<body>
+    <header>
+        <h1>Оставьте заявку здесь</h1>
+    </header>
+
+    <!-- Форма для заявки -->
+    <form id="application-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="category-field">Выберите возвраст</label>
+        <input type="text" id="category-field" readonly>
+
+        <div class="radio-group">
+            <label><input type="radio" name="category" value="18-39 лет" onclick="setCategory(this)">18-39 лет</label>
+            <label><input type="radio" name="category" value="40-49 лет" onclick="setCategory(this)">40-49 лет</label>
+            <label><input type="radio" name="category" value="50-59 лет" onclick="setCategory(this)">50-59 лет</label>
+            <label><input type="radio" name="category" value="60-70 лет" onclick="setCategory(this)">60-70 лет</label>
+        </div>
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit" class="submit-button">Оставить заявку</button>
+    </form>
+
+    <br>
+
+    <script src="script.js"></script>    
+
+    <footer>
+        <p>© Полюс севера 2024</p>
+    </footer>
+</body>
+</html>
