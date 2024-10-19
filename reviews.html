@@ -4,21 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Вход</title>
+    <title>Оставить отзыв</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Вход в систему</h1>
+        <h1>Добавьте ваш отзыв</h1>
     </header>
 
+    <!-- Форма для отзыва -->
+    <form id="review-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
 
-    <!-- Кнопка возврата на главную страницу -->
-    <br>
+        <label for="review">Ваш отзыв:</label>
+        <textarea id="review" name="review" rows="4" required></textarea>
+
+        <!-- Кнопка для отправки отзыва -->
+        <button type="submit">Отправить отзыв</button>
+    </form>
+
+    <!-- Блок для отображения отзывов -->
+    <section id="reviews-section">
+        <h2>Отзывы</h2>
+        <div id="reviews-container"></div>
+    </section>
+
+    <!-- Кнопка для возврата на главную страницу -->
     <a href="index.html" class="back-button">Вернуться на главную страницу</a>
 
     <footer>
         <p>© 2024 Мой сайт</p>
     </footer>
+
+    <!-- JavaScript код прямо в HTML -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('review-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Останавливаем отправку формы
+
+                // Получаем данные из формы
+                const name = document.getElementById('name').value;
+                const review = document.getElementById('review').value;
+
+                // Проверяем, чтобы поля не были пустыми
+                if (name.trim() === "" || review.trim() === "") {
+                    alert("Пожалуйста, заполните все поля.");
+                    return;
+                }
+
+                // Создаём новый элемент отзыва
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('review');
+
+                // Добавляем контент в новый элемент
+                reviewElement.innerHTML = `<strong>${name}</strong><p>${review}</p>`;
+
+                // Добавляем элемент в контейнер отзывов
+                document.getElementById('reviews-container').appendChild(reviewElement);
+
+                // Очищаем форму после отправки
+                document.getElementById('review-form').reset();
+            });
+        });
+    </script>
+
 </body>
 </html>

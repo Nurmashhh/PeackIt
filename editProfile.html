@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Редактировать профиль</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .profile-edit-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 95%;
+        }
+
+        .edit-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .edit-button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        .edit-button:hover {
+            background-color: #45a049;
+        }
+
+        .cancel-button {
+            background-color: #f44336;
+        }
+
+        .cancel-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-edit-container">
+        <h1>Редактировать профиль</h1>
+
+        <form id="edit-profile-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <div class="edit-buttons">
+                <button type="submit" class="edit-button">Сохранить изменения</button>
+                <button type="button" class="edit-button cancel-button" onclick="location.href='profile.html'">Отмена</button>
+            </div>
+        </form>
+    </div>
+
+    <a href="index.html" class="back-button">Вернуться на главную страницу</a>
+
+    <script>
+        // Заполнение полей формы значениями из localStorage при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function () {
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+
+            nameInput.value = localStorage.getItem('name') || '';
+            emailInput.value = localStorage.getItem('email') || '';
+            phoneInput.value = localStorage.getItem('phone') || '';
+        });
+
+        // Обработчик события отправки формы
+        document.getElementById('edit-profile-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+
+            // Получение значений из формы
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            // Сохранение значений в localStorage
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+            localStorage.setItem('phone', phone);
+
+            // Переход на страницу профиля после сохранения
+            alert('Профиль успешно обновлён!');
+            location.href = 'profile.html';
+        });
+    </script>
+
+</body>
+</html>

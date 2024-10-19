@@ -143,6 +143,7 @@ button-container {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    z-index: 5;
 }
 
 /* Эффект при наведении на кнопку регистрации */
@@ -152,6 +153,7 @@ button-container {
 
 /* Стили для скрытых кнопок */
 #hidden-buttons {
+    z-index: 5;
     position: absolute; /* Позволяет позиционировать контейнер с кнопками */
     top: 70px; /* Отступ сверху (измените по вашему усмотрению) */
     right: 20px; /* Отступ справа */
@@ -426,6 +428,167 @@ label, input, textarea {
 .tourPackages-image {
     width: 60%;
     margin-left: 20%;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.review-label {
+    margin-top: 10px;
+}
+
+.review-input, .review-textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.review-submit-button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.review-submit-button:hover {
+    background-color: #45a049;
+}
+
+#reviews-section {
+    margin-top: 20px;
+}
+
+#reviews-container {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.review {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.review strong {
+    font-size: 18px;
+}
+
+.review p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.buyEconom-button {
+    width: 146px;
+    height: 25px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 51%; /* Положение слева */
+    top: 46.2%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 90px; /* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.buyStandart-button {
+    width: 146px;
+    height: 25px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 51%; /* Положение слева */
+    top: 54%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 90px; /* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.buyBusiness-button {
+    width: 146px;
+    height: 25px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px;
+    right: 10px; /* Положение сверху */
+    left: 51%; /* Положение слева */
+    top: 62%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 90px; /* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.getProfile-button {
+    position: absolute; /* Позволяет позиционировать кнопку */
+    top: 10px; /* Отступ сверху */
+    right: 120px; /* Отступ справа */
+    padding: 30px 30px;
+    background-color: #f0f0f0; 
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 5;
+    
+}
+
+.participants-button {
+    width: 10px;
+    height: 1px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px; /* Положение сверху */
+    left: 48%; /* Положение слева */
+    top: 31%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 90px; /* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.participantsProfile-button {
+    width: 775px;
+    height: 390px;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    bottom: 5px; /* Положение сверху */
+    left: 50%; /* Положение слева */
+    top: 52.5%;
+    transform: translate(-50%, -50%); /* Центрируем кнопку */
+    padding: 43px 110px; /* Отступы внутри кнопки */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 30px; /* Закругление углов */
+    text-decoration:dashed; /* Убирает подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
 }
 
 
